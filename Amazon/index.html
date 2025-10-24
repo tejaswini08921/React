@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>reactprgm</title>
+</head>
+
+<body>
+  <textarea name="" id="txt"></textarea>
+  <button>Play</button>
+
+  <script>
+    let txt = document.getElementById('txt')
+    let btn = document.querySelector('button')
+    btn.addEventListener('click', () => {
+      leo(txt.vlaue)
+    })
+
+    function leo(max){
+      let speech = new SpeechSynthesisUtterance(max)
+      speechSynthesis.speak(speech)
+    }
+  </script>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
