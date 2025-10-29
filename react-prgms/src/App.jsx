@@ -131,16 +131,111 @@
 // }
 
 //-----------------------------------------Using API Data----------------------------------------
-import React, { Component } from 'react'
-import JSON from './Props/Data.json'
-import Cart from './Props/Cart'
+// import React, { Component } from 'react'
+// import JSON from './Props/Data.json'
+// import Cart from './Props/Cart'
 
-export default class App extends Component {
-  render() {
-    return (
-      <div>
-        <Cart data={JSON}></Cart>
-      </div>
-    )
-  }
+// export default class App extends Component {
+//   render() {
+//     return (
+//       <div>
+//         <Cart data={JSON}></Cart>
+//       </div>
+//     )
+//   }
+// }
+
+//-----------------------------Sending from parent to child in single line-------------------------------
+// import React, { Component } from 'react'
+// import JSON from './Props/Data.json'
+// import Product from './Props/Product'
+// import Cart from './Props/Cart'
+// import Cosmetics from './Props/Cosmetics'
+
+
+// export default class App extends Component {
+//   render() {
+//     return (
+//       <div>
+//        <Product data={<Cart data1={<Cosmetics data2={JSON}></Cosmetics>}></Cart>}></Product>
+//       </div>
+//     )
+//   }
+// }
+
+
+//------------------------------------------------Using FBC --------------------------------------------------
+// import React from 'react'
+// import JSON from './Props/Data.json'
+// import Product from './Props/Product'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Product data={JSON}></Product>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//---------------------------------------Task-------------------------------------------------------------
+// import React from 'react'
+// import JSON1 from './Props/JSON1.json'
+// import JSON from './Props/Data.json'
+// import JSON2 from './Props/JSON2.json'
+// import Data from './Props/Data'
+// import Data1 from './Props/Data1'
+// import Data2 from './Props/Data2'
+// import Box1 from './Props/Box1'
+// import Box2 from './Props/Box2'
+// import Box3 from './Props/Box3'
+// import Box4 from './Props/Box4'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Data>
+//         <Data1>
+//           <Box1 data3={JSON} />
+//         </Data1>
+//       </Data>
+
+//       <Data>
+//         <Data1>
+//           <Box2 data13={JSON1} />
+//         </Data1>
+//       </Data>
+
+//       <Data>
+//         <Data2>
+//           <Box3 data23={JSON2} />
+//         </Data2>
+//       </Data>
+
+//       <Data>
+//         <Data2>
+//           <Box4 data33={JSON} />
+//         </Data2>
+//       </Data>
+//     </div>
+//   )
+// }
+
+// export default App
+
+import React from 'react'
+import Accesories from './Props/JSON1.json'
+import Recepies from './Props/JSON2.json'
+import Data from './Props/Data'
+
+
+const App = () => {
+  return (
+    <div>
+      <Data food={Recepies} access={Accesories}></Data>
+    </div>
+  )
 }
+
+export default App

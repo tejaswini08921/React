@@ -31,25 +31,57 @@
 // }
 
 //-------------------------------------Using API data-------------------------------------
-import React, { Component, Fragment } from 'react'
+// import React, { Component, Fragment } from 'react'
 
-export default class Product extends Component {
-  render(props) {
-    console.log(this.props);
+// export default class Product extends Component {
+//   render(props) {
+//     console.log(this.props);
     
-    return (
-      <div>
-        {
-            this.props.max.products.map((lio)=>{//This is the core logic. It accesses the products array nested within the prop named max. The .map() method iterates over every item in this array.
-                console.log(lio);
+//     return (
+//       <div>
+//         {
+//             this.props.max.products.map((lio)=>{//This is the core logic. It accesses the products array nested within the prop named max. The .map() method iterates over every item in this array.
+//                 console.log(lio);
                 
-                return <Fragment>  
-                    <img src={lio.images[0]} alt="" />
-                </Fragment> //Used as a lightweight wrapper for the list items. It prevents extra, unnecessary <div> elements from being added to the DOM.
-            })
-        }
-      </div>
-    )
-  }
-}
+//                 return <Fragment>  
+//                     <img src={lio.images[0]} alt="" />
+//                 </Fragment> //Used as a lightweight wrapper for the list items. It prevents extra, unnecessary <div> elements from being added to the DOM.
+//             })
+//         }
+//       </div>
+//     )
+//   }
+// }
 
+//---------------------------------------Single line------------------------------------------------
+// import React, { Component } from 'react'
+
+// export default class Product extends Component {
+//   render(props) {
+//     console.log(this.props);
+    
+//     return (
+//       <div>
+//         {
+//           this.props.data
+//         }
+//       </div>
+//     )
+//   }
+// }
+
+//-------------------------------------------in FBC---------------------------------------------
+// import React from 'react'
+// import Cart from './Cart'
+
+// const Product = (props) => {
+//   console.log(props);
+  
+//   return (
+//     <div>
+//       <Cart data1={props.data}></Cart>
+//     </div>
+//   )
+// }
+
+// export default Product
