@@ -224,16 +224,39 @@
 
 // export default App
 
-import React from 'react'
-import Accesories from './Props/JSON1.json'
-import Recepies from './Props/JSON2.json'
-import Data from './Props/Data'
+// import React from 'react'
+// import Accesories from './Props/JSON1.json'
+// import Recepies from './Props/JSON2.json'
+// import Data from './Props/Data'
 
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Data food={Recepies} access={Accesories}></Data>
+//     </div>
+//   )
+// }
+
+// export default App
+
+import React, { useState } from 'react'
+import VIDEO from './Youtube/data.json'
+import Container from './Youtube/Container'
 
 const App = () => {
+
+  let [state, setState] = useState(VIDEO)
+
+  let [play, setPlay] = useState(state[0])
+
+  let handlePlay = (max) => {
+    setPlay(max.videoUrl)
+  }
+
   return (
     <div>
-      <Data food={Recepies} access={Accesories}></Data>
+      <Container state={state} play={play} fun={handlePlay}></Container>
     </div>
   )
 }
