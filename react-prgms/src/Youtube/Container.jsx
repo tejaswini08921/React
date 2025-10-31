@@ -2,30 +2,23 @@ import React from 'react'
 import PrintThumbnail from './PrintThumbnail';
 import VideoPlayer from './VideoPlayer';
 
-const Container = ({state,play,fun}) => {
-    
-  return (
-    <div>
-        
-        <article>
-            <aside>
-                <VideoPlayer play={play}></VideoPlayer>
-            </aside>
-{/* ---------------------------------------------------------------------------------------------------------- */}
-            <aside>
-                {
-                    state.map((lio)=>{
-                        console.log(lio);
+const Container = ({ state, play, fun }) => {
 
-                        return <PrintThumbnail lio={lio} fun={fun}></PrintThumbnail>
-                        
-                    })
-                }
-            </aside>
-        </article>
+    return (
+        <div>
+            <article>
+                <aside>
+                    <VideoPlayer play={play} />
+                </aside>
+                <aside className="thumbnails-container">
+                    {state.map((lio, index) => (
+                        <PrintThumbnail key={index} lio={lio} fun={fun} />
+                    ))}
+                </aside>
+            </article>
 
-    </div>
-  )
+        </div>
+    )
 }
 
 export default Container
