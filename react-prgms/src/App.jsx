@@ -240,25 +240,60 @@
 
 // export default App
 
-import React, { useState } from 'react'
-import VIDEO from './Youtube/data.json'
-import Container from './Youtube/Container'
+import React, { useState } from 'react';
+import VIDEO from './Youtube/data.json';
+import Container from './Youtube/Container';
+import './App.css'; // <-- Import CSS
 
 const App = () => {
-
-  let [state, setState] = useState(VIDEO)
-
-  let [play, setPlay] = useState(state[0])
+  let [state, setState] = useState(VIDEO);
+  let [play, setPlay] = useState(state[0]);
 
   let handlePlay = (max) => {
-    setPlay(max.videoUrl)
-  }
+    setPlay(max.videoUrl);
+  };
 
   return (
     <div>
+      <header className="header">
+        {/* Left Section - Hamburger + Logo */}
+        <div className="left-section">
+          <i className="fa-solid fa-bars fa-lg"></i>
+          <img
+            src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/youtube-logo-icon.png"
+            alt="YouTube Logo"
+            className="logo"
+          />
+        </div>
+
+        {/* Middle Section - Search Bar + Mic */}
+        <div className="middle-section">
+          <div className="search-bar">
+            <input type="text" placeholder="Search" />
+            <button className="search-btn">
+              <i className="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <i className="fa-solid fa-microphone mic-icon"></i>
+        </div>
+
+        {/* Right Section - Icons */}
+        <div className="right-section">
+          <div className='create'>
+            <i className="fa-solid fa-plus">
+              <p>Create</p>
+            </i>
+          </div>
+
+          <i className="fa-solid fa-bell"></i>
+          <i className="fa-solid fa-user"></i>
+        </div>
+      </header>
+
       <Container state={state} play={play} fun={handlePlay}></Container>
     </div>
-  )
-}
 
-export default App
+  );
+};
+
+export default App;

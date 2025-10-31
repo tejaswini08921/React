@@ -13,7 +13,7 @@
 
 } */
 
-div>div {
+/* div>div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,4 +30,149 @@ button{
   position: relative;
   left: 150px;
   background-color: lightblue;
+} */
+/* ============================================Youtube=========================================================== */
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== Header ===== */
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* ===== Left Section ===== */
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.left-section i {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  cursor: pointer;
+}
+
+/* ===== Middle Section ===== */
+.middle-section {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  overflow: hidden;
+  width: 600px;
+  background-color: #f9f9f9;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+.search-btn {
+  background-color: #f8f8f8;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-left: 1px solid #ddd;
+  transition: background-color 0.2s;
+}
+
+.search-btn:hover {
+  background-color: #e5e5e5;
+}
+
+.search-btn i {
+  font-size: 18px;
+  color: #606060;
+}
+
+.mic-icon {
+  width: 30px;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.mic-icon:hover {
+  background-color: #e0e0e0;
+}
+
+/* ===== Right Section ===== */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 85px;
+}
+
+
+.right-section i {
+  display: flex;
+  font-size: 22px;
+  cursor: pointer;
+  color: #606060;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.right-section p {
+  font-size: 18px;
+  cursor: pointer;
+  color: black;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.right-section i:hover {
+  transform: scale(1.2);
+  color: #000;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .search-bar {
+    width: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .middle-section {
+    display: none;
+  }
+
+  .header {
+    justify-content: space-between;
+  }
 }
