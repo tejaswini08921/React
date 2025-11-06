@@ -33,7 +33,7 @@ button{
 } */
 /* ============================================Youtube=========================================================== */
 /* ===== Reset ===== */
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -41,7 +41,7 @@ button{
 }
 
 /* ===== Header ===== */
-.header {
+/* .header {
   width: 100%;
   height: 70px;
   background-color: #ffffff;
@@ -56,7 +56,7 @@ button{
 }
 
 /* ===== Left Section ===== */
-.left-section {
+/* .left-section {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -74,7 +74,7 @@ button{
 }
 
 /* ===== Middle Section ===== */
-.middle-section {
+/* .middle-section {
   display: flex;
   align-items: center;
   flex: 1;
@@ -112,9 +112,9 @@ button{
 
 .search-btn:hover {
   background-color: #e5e5e5;
-}
+} */
 
-.search-btn i {
+/* .search-btn i {
   font-size: 18px;
   color: #606060;
 }
@@ -130,10 +130,10 @@ button{
 
 .mic-icon:hover {
   background-color: #e0e0e0;
-}
+} */
 
 /* ===== Right Section ===== */
-.right-section {
+/* .right-section {
   display: flex;
   align-items: center;
   gap: 85px;
@@ -158,10 +158,10 @@ button{
 .right-section i:hover {
   transform: scale(1.2);
   color: #000;
-}
+/* } */ 
 
 /* ===== Responsive ===== */
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   .search-bar {
     width: 400px;
   }
@@ -175,10 +175,10 @@ button{
   .header {
     justify-content: space-between;
   }
-}
+} */
 
 /* Main grid layout  */
-article {
+/* article {
     display: grid;
     grid-template-areas: "player sidebar";
     grid-template-columns: 1fr 350px;
@@ -186,38 +186,38 @@ article {
     padding: 24px;
     max-width: 1400px;
     margin: 0 auto;
-}
+} */
 
 /* Video player section */
-article > aside:first-child {
+/* article > aside:first-child {
     grid-area: player;
-}
+} */
 
 /* Thumbnails sidebar */
-article > aside:last-child {
+/* article > aside:last-child {
     grid-area: sidebar;
     max-height: calc(100vh - 100px);
     overflow-y: auto;
     padding-right: 8px;
-}
+} */
 
 /* Make video responsive */
-.video-player-container video {
+/* .video-player-container video {
     width: 100%;
     height: auto;
     border-radius: 12px;
     background: #000;
-}
+} */
 
 /* Thumbnail list */
-.thumbnails-container {
+/* .thumbnails-container {
     display: flex;
     flex-direction: column;
     gap: 16px;
-}
+} */
 
 /* Custom scrollbar for sidebar */
-article > aside:last-child::-webkit-scrollbar {
+/* article > aside:last-child::-webkit-scrollbar {
     width: 6px;
 }
 
@@ -225,3 +225,29 @@ article > aside:last-child::-webkit-scrollbar-thumb {
     background: #ccc;
     border-radius: 3px;
 }
+
+/* Theme */
+.light-theme {
+  background-color: white;
+  color: black;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.dark-theme {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+button {
+  margin: 10px;
+  padding: 8px;
+}
+
+/* #box{
+  border: 2px solid black;
+  height: 200px;
+  width: 200px;
+} */
