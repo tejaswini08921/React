@@ -507,19 +507,33 @@
 // export default App
 
 //--------------------------------------Practice------------------------------------------------------
+// import React from 'react'
+// import Counter from './PRACATICE/Counter'
+// import ParentCounter from './PRACATICE/ParentCounter'
+// import ToDo from './PRACATICE/ToDo'
+// import ToDoItem from './PRACATICE/ToDoItem'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <ParentCounter></ParentCounter>
+//       <ToDo></ToDo>
+     
+//       </div>
+//   )
+// }
+
+// export default App
+
+//-------------------------------FORM HANDLING-------------------------------------------------------
 import React from 'react'
-import Counter from './PRACATICE/Counter'
-import ParentCounter from './PRACATICE/ParentCounter'
-import ToDo from './PRACATICE/ToDo'
-import ToDoItem from './PRACATICE/ToDoItem'
+import Form from './FORMS/Form'
 
 const App = () => {
   return (
     <div>
-      <ParentCounter></ParentCounter>
-      <ToDo></ToDo>
-     
-      </div>
+      <Form></Form>
+    </div>
   )
 }
 
