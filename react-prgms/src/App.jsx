@@ -526,13 +526,27 @@
 // export default App
 
 //-------------------------------FORM HANDLING-------------------------------------------------------
+// import React from 'react'
+// import Form from './FORMS/Form'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Form></Form>
+//     </div>
+//   )
+// }
+
+// export default App
+
+//----------------------------------sending data to our local server---------------------------------
 import React from 'react'
-import Form from './FORMS/Form'
+import Server from './FORMS/Server'
 
 const App = () => {
   return (
     <div>
-      <Form></Form>
+      <Server></Server>
     </div>
   )
 }
